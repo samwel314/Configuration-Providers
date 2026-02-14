@@ -17,3 +17,16 @@ app.Run();
 BEFORE USE it you should set it 
  
  */
+
+/*
+
+2 project based environment variables
+some of this variables are used by asp.net core framework to determine the environment of the application
+and have a prefix of "ASPNETCORE_"
+Like : aspnetcore_environment = development,production,staging
+
+
+// how can add ? 
+from lanchsettings.json file for local development
+
+ */
