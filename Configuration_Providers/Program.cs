@@ -1,8 +1,18 @@
 var builder = WebApplication.CreateBuilder(args);
 
+
+var config = new Dictionary<string, string>
+{
+    {"key1","value1"},
+    {"key2","value2"},
+    {"key3","value3"},
+};
+
 // add json file as configuration provider 
 // false => the file is not optional if it not exist the application will throw an exception
 builder.Configuration.AddJsonFile("CutoSettings.json", false, true); 
+
+builder.Configuration.AddInMemoryCollection(config); // add in memory configuration provider
 
 var app = builder.Build();
 
@@ -57,5 +67,15 @@ means sort is important if you add j
 
 not save to store sensitive data
  
- */ 
+ */
 
+/*
+ 
+ 5 - in memory configuration provider
+
+you can add configuration providers from code key value pair like a dictionary
+
+it use for test purpose or for small configuration data that you want to add it from code
+ 
+it override all configuration providers 
+ */
