@@ -30,3 +30,12 @@ Like : aspnetcore_environment = development,production,staging
 from lanchsettings.json file for local development
 
  */
+
+
+/*
+ 3 - cli configuration providers
+ 
+for testing purpose you can add configuration providers from cli
+dotnet run --key=value   , --urls="https/...soon.."
+ 
+ */
