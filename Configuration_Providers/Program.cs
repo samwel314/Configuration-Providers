@@ -1,4 +1,9 @@
 var builder = WebApplication.CreateBuilder(args);
+
+// add json file as configuration provider 
+// false => the file is not optional if it not exist the application will throw an exception
+builder.Configuration.AddJsonFile("CutoSettings.json", false, true); 
+
 var app = builder.Build();
 
 //   this endpoint take a ( key ) and return value 
@@ -39,3 +44,18 @@ for testing purpose you can add configuration providers from cli
 dotnet run --key=value   , --urls="https/...soon.."
  
  */
+
+/*
+ 4 - file based configuration providers
+ 
+example : json file , xml file , ini file
+if file have key and another file have the same key the last one will override the first one
+ 
+example : appsettings.json file , appsettings.development.json file
+
+means sort is important if you add j
+
+not save to store sensitive data
+ 
+ */ 
+
