@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="AccessingConfiguration/AccessingConfiguration.csproj" Id="973ed6f8-0507-4b98-8c36-5503e7a2f27a" />
   <Project Path="Configuration_Providers/Configuration_Providers.csproj" />
 </Solution>
